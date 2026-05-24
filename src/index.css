@@ -1,1 +1,16 @@
-@import "tailwindcss"
+/** @format */
+
+@import "tailwindcss";
+
+@theme {
+  --color-Red: hsl(360, 48%, 43%);
+  --color-dark-blue: hsl(238, 96%, 5%);
+  --color-Neutral-900: hsl(227, 75%, 14%);
+  --color-Neutral-800: hsl(226, 25%, 17%);
+  --color-Neutral-700: hsl(225, 23%, 24%);
+  --color-Neutral-600: hsl(226, 11%, 37%);
+  --color-Neutral-300: hsl(0, 0%, 78%);
+  --color-Neutral-200: hsl(217, 61%, 90%);
+  --color-Neutral-100: hsl(0, 0%, 93%);
+  --color-Neutral-0: hsl(200, 60%, 99%);
+}
