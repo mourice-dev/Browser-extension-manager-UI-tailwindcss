@@ -103,23 +103,26 @@ function List() {
         </div>
         <div className='flex justify-center md:justify-between gap-3 items-center mt-2 md:mt-0'>
           <div
-            className='flex justify-center hover:bg-Red items-center  border-1  text-center bg-white dark:bg-Neutral-700 px-3 py-1 text-white text-sm rounded-2xl border-1 shadow-md dark:shadow-0 dark:border-Neutral-600 dark:hover:border-0 cursor-pointer'
+            className={`flex justify-center hover:bg-Red items-center  border-1  text-center ${custome === null ? "bg-Red dark:bg-Red " : "bg-white"}  dark:bg-Neutral-700 px-3 py-1  text-sm rounded-2xl border-1 shadow-md dark:shadow-0 dark:border-Neutral-600 dark:hover:border-0 cursor-pointer`}
             onClick={() => setCustome(null)}>
-            <p className='text-Neutral-800  hover:text-white dark:text-white dark:hover:text-Neutral-800'>
+            <p
+              className={` ${custome === null ? "text-white dark:text-Neutral-800" : "dark:text-white text-Neutral-800"} hover:text-white dark:hover:text-Neutral-800`}>
               All
             </p>
           </div>
           <div
-            className='flex justify-center hover:bg-Red items-center  border-1  text-center bg-white dark:bg-Neutral-700 px-3 py-1 text-white text-sm rounded-2xl border-1 shadow-md dark:shadow-0 dark:border-Neutral-600 dark:hover:border-0 cursor-pointer'
+            className={`flex justify-center hover:bg-Red items-center  border-1  text-center ${custome === true ? "bg-Red dark:bg-Red " : "bg-white"}  dark:bg-Neutral-700 px-3 py-1  text-sm rounded-2xl border-1 shadow-md dark:shadow-0 dark:border-Neutral-600 dark:hover:border-0 cursor-pointer`}
             onClick={() => setCustome(true)}>
-            <p className='text-Neutral-800  hover:text-white dark:text-white dark:hover:text-Neutral-800'>
+            <p
+              className={` ${custome === true ? "text-white dark:text-Neutral-800" : "dark:text-white text-Neutral-800"} hover:text-white dark:hover:text-Neutral-800`}>
               Active
             </p>
           </div>
           <div
-            className='flex justify-center hover:bg-Red items-center  border-1  text-center bg-white dark:bg-Neutral-700 px-3 py-1 text-white text-sm rounded-2xl border-1 shadow-md dark:shadow-0 dark:border-Neutral-600 dark:hover:border-0 cursor-pointer'
+            className={`flex justify-center hover:bg-Red items-center  border-1  text-center ${custome === false ? "bg-Red dark:bg-Red " : "bg-white"}  dark:bg-Neutral-700 px-3 py-1  text-sm rounded-2xl border-1 shadow-md dark:shadow-0 dark:border-Neutral-600 dark:hover:border-0 cursor-pointer`}
             onClick={() => setCustome(false)}>
-            <p className='text-Neutral-800  hover:text-white dark:text-white dark:hover:text-Neutral-800'>
+            <p
+              className={` ${custome === false ? "text-white dark:text-Neutral-800" : "dark:text-white text-Neutral-800"} hover:text-white dark:hover:text-Neutral-800`}>
               Inactive
             </p>
           </div>
