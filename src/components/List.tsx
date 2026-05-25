@@ -42,15 +42,17 @@ function List() {
     .map((item, index) => {
       return (
         <>
-          <div className='bg-Neutral-800 rounded-2xl border-1 border-Neutral-600 mt-3 md:mt-0'>
+          <div className='shadow-xl dark:bg-Neutral-800 rounded-2xl border-1 border-gray-300 dark:border-Neutral-800  mt-3 md:mt-0'>
             <div className='p-4'>
               <div className='flex gap-4'>
                 <div>
-                  <img src={item.image} alt='' className='h-10' />
+                  <img src={item.image} alt='' className='h-15' />
                 </div>
                 <div>
-                  <p className='font-bold text-white'>DevLens</p>
-                  <p className='text-sm text-gray-400'>
+                  <p className='font-bold  text-Neutral-800 dark:text-white'>
+                    DevLens
+                  </p>
+                  <p className='text-sm text-gray-600 dark:text-gray-400'>
                     Quickly inspect page layouts and visualize element
                     boundaries.
                   </p>
@@ -64,8 +66,10 @@ function List() {
                       isActive.filter((_, itemIndex) => itemIndex != index),
                     )
                   }>
-                  <div className='flex justify-center items-center rounded-3xl border-1 border-Neutral-600 text-white px-3 py-1 cursor-pointer hover:bg-Neutral-700 transition duration-500 '>
-                    <p className='text-sm'>Remove</p>
+                  <div className='flex justify-center items-center rounded-3xl border-1 border-Neutral-600 dark:border-Neutral-600 hover:border-0  text-white px-3 py-1 cursor-pointer hover:bg-Red transition duration-500 '>
+                    <p className='text-xs text-Neutral-800 dark:text-white font-semibold hover:text-white hover:dark:text-Neutral-800 '>
+                      Remove
+                    </p>
                   </div>
                 </div>
                 <div
@@ -93,23 +97,31 @@ function List() {
     <div className='mt-10 md:mt-15'>
       <div className='md:flex justify-between items-center text-white'>
         <div className='flex justify-center items-center text-center'>
-          <p className='text-2xl font-bold'>Extensions List</p>
+          <p className='text-2xl font-bold dark:text-white text-Neutral-800'>
+            Extensions List
+          </p>
         </div>
         <div className='flex justify-center md:justify-between gap-3 items-center mt-2 md:mt-0'>
           <div
-            className='flex justify-center items-center  border-1 hover:border-Red text-center bg-Red px-3 py-1 rounded-2xl text-Neutral-800 border-1 cursor-pointer'
+            className='flex justify-center hover:bg-Red items-center  border-1  text-center bg-white dark:bg-Neutral-700 px-3 py-1 text-white text-sm rounded-2xl border-1 shadow-md dark:shadow-0 dark:border-Neutral-600 dark:hover:border-0 cursor-pointer'
             onClick={() => setCustome(null)}>
-            <p>All</p>
+            <p className='text-Neutral-800  hover:text-white dark:text-white dark:hover:text-Neutral-800'>
+              All
+            </p>
           </div>
           <div
-            className='flex justify-center items-center  border-1 hover:border-Red text-center bg-Neutral-700 px-3 py-1 text-white text-sm rounded-2xl border-1 border-Neutral-600 cursor-pointer'
+            className='flex justify-center hover:bg-Red items-center  border-1  text-center bg-white dark:bg-Neutral-700 px-3 py-1 text-white text-sm rounded-2xl border-1 shadow-md dark:shadow-0 dark:border-Neutral-600 dark:hover:border-0 cursor-pointer'
             onClick={() => setCustome(true)}>
-            <p>Active</p>
+            <p className='text-Neutral-800  hover:text-white dark:text-white dark:hover:text-Neutral-800'>
+              Active
+            </p>
           </div>
           <div
-            className='flex justify-center items-center  border-1 hover:border-Red text-center bg-Neutral-700 px-3 py-1 text-white text-sm rounded-2xl border-1 border-Neutral-600 cursor-pointer'
+            className='flex justify-center hover:bg-Red items-center  border-1  text-center bg-white dark:bg-Neutral-700 px-3 py-1 text-white text-sm rounded-2xl border-1 shadow-md dark:shadow-0 dark:border-Neutral-600 dark:hover:border-0 cursor-pointer'
             onClick={() => setCustome(false)}>
-            <p>Inactive</p>
+            <p className='text-Neutral-800  hover:text-white dark:text-white dark:hover:text-Neutral-800'>
+              Inactive
+            </p>
           </div>
         </div>
       </div>

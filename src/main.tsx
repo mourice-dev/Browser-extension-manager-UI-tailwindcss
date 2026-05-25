@@ -6,14 +6,15 @@ import { configureStore } from "@reduxjs/toolkit";
 import "./index.css";
 import App from "./App.tsx";
 import { Provider } from "react-redux";
-import themesSlice from "./themesSlice.tsx";
+import themeReducer from "./themeSlice.tsx";
 
 const store = configureStore({
   reducer: {
-    theme: themesSlice,
+    theme: themeReducer,
   },
 });
-
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Provider store={store}>
